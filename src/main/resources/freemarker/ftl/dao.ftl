@@ -1,23 +1,19 @@
-/**
- * @filename:${entityName}Dao ${createTime}
- * @project ${project}  ${version}
- * Copyright(c) 2018 ${author} Co. Ltd. 
- * All right reserved. 
- */
+
 package ${daoUrl};
 
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import ${entityUrl}.${entityName};
 
-/**   
- *  
- * @Description:  ${entityComment}——DAO
- * @Author:       ${author}   
- * @CreateDate:   ${createTime}
- * @Version:      ${version}
- *    
- */
+/**
+*
+* 描述:  ${entityComment}dao接口
+* 作者:  ${author}
+* 时间:  ${createTime}
+* @Version: ${version}
+*
+*/
+
 @Mapper
 public interface ${entityName}Dao {
 	

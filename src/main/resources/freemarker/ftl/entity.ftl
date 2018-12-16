@@ -17,14 +17,14 @@ import lombok.ToString;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
-/**   
- *  
- * @Description:  ${entityComment}
- * @Author:       ${author}   
- * @CreateDate:   ${createTime}
- * @Version:      ${version}
- *    
- */
+/**
+*
+* 描述:  ${entityComment}实体表实体po
+* 作者:  ${author}
+* 时间:  ${createTime}
+* @Version: ${version}
+*
+*/
 @Data
 @ToString
 @AllArgsConstructor

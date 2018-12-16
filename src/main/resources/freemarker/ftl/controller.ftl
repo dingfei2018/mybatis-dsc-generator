@@ -1,9 +1,3 @@
-/**
- * @filename:${entityName}Controller ${createTime}
- * @project ${project}  ${version}
- * Copyright(c) 2018 ${author} Co. Ltd. 
- * All right reserved. 
- */
 package ${controllerUrl};
 
 import java.util.List;
@@ -30,10 +24,10 @@ import io.swagger.annotations.ApiOperation;
 
 /**   
  * 
- * @Description:  ${entityComment}接口层
- * @Author:       ${author}   
- * @CreateDate:   ${createTime}
- * @Version:      ${version}
+ * @描述:  ${entityComment}REST api相关功能
+ * @作者:  ${author}
+ * @时间:  ${createTime}
+ * @Version:${version}
  *    
  */
 @Api(description = "${entityComment}",value="${entityComment}" )
@@ -44,22 +38,22 @@ public class ${entityName}Controller {
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
-	public ${entityName}Service ${objectName}ServiceImpl;
+	public ${entityName}Service ${objectName}Service;
 	
 	/**
-	 * @explain 查询${entityComment}对象  <swagger GET请求>
+	 * @查询${entityComment}对象
 	 * @param   对象参数：id
 	 * @return  ${objectName}
 	 * @author  ${author}
 	 * @time    ${createTime}
 	 */
-	@GetMapping("/get${entityName}ById/{id}")
-	@ApiOperation(value = "获取${entityComment}信息", notes = "获取${entityComment}信息[${objectName}]，作者：${author}")
+	@GetMapping("/{id}")
+	@ApiOperation(value = "获取${entityComment}信息", notes = "获取${entityComment}")
 	@ApiImplicitParam(paramType="path", name = "id", value = "${entityComment}id", required = true, dataType = "${idType}")
 	public JsonResult<${entityName}> get${entityName}ById(@PathVariable("id")${idType} id){
 		JsonResult<${entityName}> result=new JsonResult<${entityName}>();
 		try {
-			${entityName} ${objectName}=${objectName}ServiceImpl.selectByPrimaryKey(id);
+			${entityName} ${objectName}=${objectName}Service.selectByPrimaryKey(id);
 			if (${objectName}!=null) {
 				result.setCode(1);
 				result.setMessage("成功");
@@ -78,18 +72,18 @@ public class ${entityName}Controller {
 	}
 	
 	/**
-	 * @explain 添加${entityComment}对象
+	 * @添加${entityComment}对象
 	 * @param   对象参数：${objectName}
 	 * @return  int
 	 * @author  ${author}
 	 * @time    ${createTime}
 	 */
-	@PostMapping("/insertSelective")
-	@ApiOperation(value = "添加${entityComment}", notes = "添加${entityComment}[${objectName}],作者：${author}")
+	@PostMapping("/")
+	@ApiOperation(value = "添加${entityComment}", notes = "添加${entityComment}")
 	public JsonResult<${entityName}> insertSelective(${entityName} ${objectName}){
 		JsonResult<${entityName}> result=new JsonResult<${entityName}>();
 		try {
-			int rg=${objectName}ServiceImpl.insertSelective(${objectName});
+			int rg=${objectName}Service.insertSelective(${objectName});
 			if (rg>0) {
 				result.setCode(1);
 				result.setMessage("成功");
@@ -108,19 +102,19 @@ public class ${entityName}Controller {
 	}
 	
 	/**
-	 * @explain 删除${entityComment}对象
+	 * @删除${entityComment}对象
 	 * @param   对象参数：id
 	 * @return  int
 	 * @author  ${author}
 	 * @time    ${createTime}
 	 */
-	@PostMapping("/deleteByPrimaryKey")
-	@ApiOperation(value = "删除${entityComment}", notes = "删除${entityComment},作者：${author}")
+	@DeleteMapping("/{id}")
+	@ApiOperation(value = "删除${entityComment}", notes = "删除${entityComment}")
 	@ApiImplicitParam(paramType="query", name = "id", value = "${entityComment}id", required = true, dataType = "${idType}")
-	public JsonResult<Object> deleteByPrimaryKey(${idType} id){
+	public JsonResult<Object> deleteByPrimaryKey( @PathVariable("id") ${idType} id){
 		JsonResult<Object> result=new JsonResult<Object>();
 		try {
-			int reg=${objectName}ServiceImpl.deleteByPrimaryKey(id);
+			int reg=${objectName}Service.deleteByPrimaryKey(id);
 			if (reg>0) {
 				result.setCode(1);
 				result.setMessage("成功");
@@ -139,18 +133,18 @@ public class ${entityName}Controller {
 	}
 	
 	/**
-	 * @explain 修改${entityComment}对象
+	 * @ 修改${entityComment}对象
 	 * @param   对象参数：${objectName}
 	 * @return  ${objectName}
 	 * @author  ${author}
 	 * @time    ${createTime}
 	 */
-	@ApiOperation(value = "修改${entityComment}", notes = "修改${entityComment}[${objectName}],作者：${author}")
-	@PostMapping("/updateByPrimaryKeySelective")
+	@ApiOperation(value = "修改${entityComment}", notes = "修改${entityComment}")
+	@PutMapping("/")
 	public JsonResult<${entityName}> updateByPrimaryKeySelective(${entityName} ${objectName}){
 		JsonResult<${entityName}> result=new JsonResult<${entityName}>();
 		try {
-			int reg = ${objectName}ServiceImpl.updateByPrimaryKeySelective(${objectName});
+			int reg = ${objectName}Service.updateByPrimaryKeySelective(${objectName});
 			if (reg>0) {
 				result.setCode(1);
 				result.setMessage("成功");
@@ -169,18 +163,18 @@ public class ${entityName}Controller {
 	}
 	
 	/**
-	 * @explain 获取匹配${entityComment}
+	 * @获取匹配${entityComment}
 	 * @param   对象参数：${objectName}
 	 * @return  List<${entityName}>
 	 * @author  ${author}
 	 * @time    ${createTime}
 	 */
-	@ApiOperation(value = "条件查询${entityComment}", notes = "条件查询[${objectName}],作者：${author}")
+	@ApiOperation(value = "条件查询${entityComment}", notes = "条件查询[${objectName}]")
 	@PostMapping("/query${entityName}List")
 	public JsonResult<List<${entityName}>> query${entityName}List(${entityName} ${objectName}){
 		JsonResult<List<${entityName}>> result=new JsonResult<List<${entityName}>>();
 		try {
-			List<${entityName}> list = ${objectName}ServiceImpl.query${entityName}List(${objectName});
+			List<${entityName}> list = ${objectName}Service.query${entityName}List(${objectName});
 			result.setCode(1);
 			result.setMessage("成功");
 			result.setData(list);
@@ -193,14 +187,14 @@ public class ${entityName}Controller {
 	}
 	
 	/**
-	 * @explain 分页条件查询${entityComment}   
+	 * @分页条件查询${entityComment}
 	 * @param   对象参数：AppPage<${entityName}>
 	 * @return  PageInfo<${entityName}>
 	 * @author  ${author}
 	 * @time    ${createTime}
 	 */
 	@GetMapping("/getPage${entityName}")
-	@ApiOperation(value = "分页查询", notes = "分页查询返回对象[PageInfo<${entityName}>],作者：边鹏")
+	@ApiOperation(value = "分页查询", notes = "分页查询返回对象[PageInfo<${entityName}>]")
 	@ApiImplicitParams({
         @ApiImplicitParam(paramType="query", name = "pageNum", value = "当前页", required = true, dataType = "int"),
         @ApiImplicitParam(paramType="query", name = "pageSize", value = "页行数", required = true, dataType = "int")
@@ -215,7 +209,7 @@ public class ${entityName}Controller {
 		page.setParam(${objectName});
 		//分页数据
 		try {
-			PageInfo<${entityName}> pageInfo = ${objectName}ServiceImpl.get${entityName}BySearch(page);
+			PageInfo<${entityName}> pageInfo = ${objectName}Service.get${entityName}BySearch(page);
 			result.setCode(1);
 			result.setMessage("成功");
 			result.setData(pageInfo);

@@ -9,8 +9,10 @@ import com.github.mybatis.entity.PropertyInfo;
 public class Generator {
 	//路径信息
 	public static final String ENTITY="entity";
+	public static final String DTO="dto";
+	public static final String QUERY="query";
 	public static final String DAO="dao";
-	public static final String DAO_IMPL="daoImpl";
+	public static final String MAPPER="mapper";
 	public static final String SERVICE="service";
 	public static final String SERVICE_IMPL="serviceImpl";
 	public static final String CONTROLLER="controller";
@@ -21,6 +23,16 @@ public class Generator {
 		String fileUrl= EntityInfoUtil.getGeneratorFileUrl(url, bi.getEntityUrl(), bi.getEntityName(), ENTITY);
 		return FreemarkerUtil.createFile(bi, "entity.ftl", fileUrl);
 	}
+	//①创建DTO实体类
+	public static JsonResult createDto(String url,BasisInfo bi) {
+		String fileUrl= EntityInfoUtil.getGeneratorFileUrl(url, bi.getDtoUrl(), bi.getEntityName(), DTO);
+		return FreemarkerUtil.createFile(bi, "dto.ftl", fileUrl);
+	}
+	//①创建QUERY实体类
+	public static JsonResult createQuery(String url,BasisInfo bi) {
+		String fileUrl= EntityInfoUtil.getGeneratorFileUrl(url, bi.getQueryUrl(), bi.getEntityName(), QUERY);
+		return FreemarkerUtil.createFile(bi, "query.ftl", fileUrl);
+	}
 	
 	//②创建DAO
 	public static JsonResult createDao(String url,BasisInfo bi) {
@@ -29,8 +41,8 @@ public class Generator {
 	}
 	
 	//③创建mapper配置文件
-	public static JsonResult createDaoImpl(String url,BasisInfo bi) {
-		String fileUrl= EntityInfoUtil.getGeneratorFileUrl(url, bi.getMapperUrl(), bi.getEntityName(), DAO_IMPL);
+	public static JsonResult createMapper(String url,BasisInfo bi) {
+		String fileUrl= EntityInfoUtil.getGeneratorFileUrl(url, bi.getMapperUrl(), bi.getEntityName(), MAPPER);
 		List<PropertyInfo> list=bi.getCis();
 		String agile="";
 		for (PropertyInfo propertyInfo : list) {

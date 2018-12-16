@@ -1,9 +1,3 @@
-/**
- * @filename:${entityName}Service ${createTime}
- * @project ${project}  ${version}
- * Copyright(c) 2018 ${author} Co. Ltd. 
- * All right reserved. 
- */
 package ${serviceUrl};
 
 import java.util.List;
@@ -13,10 +7,10 @@ import com.item.util.AppPage;
 import ${entityUrl}.${entityName};
 /**   
  *  
- * @Description:  ${entityComment}——SERVICE
- * @Author:       ${author}   
- * @CreateDate:   ${createTime}
- * @Version:      ${version}
+ * @描述:  ${entityComment}服务接口
+ * @作者:  ${author}
+ * @时间:  ${createTime}
+ * @Version: ${version}
  *    
  */
 public interface ${entityName}Service {

@@ -62,13 +62,17 @@ public class EntityInfoUtil {
 			return url+pageToUrl(packageUrl)+entityName+".java";
 		}else if(type.equals("dao")) {
 			return url+pageToUrl(packageUrl)+entityName+"Dao.java";
-		}else if(type.equals("daoImpl")) {
+		}else if(type.equals("mapper")) {
 			return url+pageToUrl(packageUrl)+entityName+"Mapper.xml";
 		}else if(type.equals("service")) {
 			return url+pageToUrl(packageUrl)+entityName+"Service.java";
 		}else if(type.equals("serviceImpl")) {
 			return url+pageToUrl(packageUrl)+entityName+"ServiceImpl.java";
-		}else if(type.equals("controller")) {
+		} else if(type.equals("dto")) {
+			return url+pageToUrl(packageUrl)+entityName+"Dto.java";
+		} else if(type.equals("query")) {
+			return url+pageToUrl(packageUrl)+entityName+"Query.java";
+		} else if(type.equals("controller")) {
 			return url+pageToUrl(packageUrl)+entityName+"Controller.java";
 		}
 		return null;

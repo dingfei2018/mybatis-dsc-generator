@@ -72,7 +72,11 @@ public class FreemarkerUtil {
 			name="ServiceImpl.java";
 		} else if(name.equals("controller.ftl")){
 			name="Controller.java";
-		} 
+		} else if(name.equals("dto.ftl")){
+			name="Dto.java";
+		} else if(name.equals("query.ftl")){
+			name="Query.java";
+		}
 		return name;
 	}
 }

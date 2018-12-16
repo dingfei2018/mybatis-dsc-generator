@@ -1,9 +1,4 @@
-/**
- * @filename:${entityName}ServiceImpl ${createTime}
- * @project ${project}  ${version}
- * Copyright(c) 2018 ${author} Co. Ltd. 
- * All right reserved. 
- */
+
 package ${serviceImplUrl};
 
 import java.util.List;
@@ -20,10 +15,10 @@ import ${serviceUrl}.${entityName}Service;
 
 /**   
  *  
- * @Description:  ${entityComment}——SERVICEIMPL
- * @Author:       ${author}   
- * @CreateDate:   ${createTime}
- * @Version:      ${version}
+ * @描述:  ${entityComment}接口具体实现
+ * @作者:  ${author}
+ * @时间:  ${createTime}
+ * @Version: ${version}
  *    
  */
 @Service

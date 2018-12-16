@@ -42,6 +42,10 @@ public class BasisInfo implements Serializable{
 	private String entityUrl;
 	
 	private String daoUrl;
+
+	private String dtoUrl;
+
+	private String queryUrl;
 	
 	private String mapperUrl;
 	
@@ -59,7 +63,7 @@ public class BasisInfo implements Serializable{
 	
 	public BasisInfo(String project, String author, String version, String dbUrl, String dbName, String dbPassword,
 			String database, String createTime, String agile, String entityUrl, String daoUrl, String mapperUrl,
-			String serviceUrl, String serviceImplUrl, String controllerUrl) {
+			String serviceUrl, String serviceImplUrl, String controllerUrl,String dtoUrl,String queryUrl) {
 		super();
 		this.project = project;
 		this.author = author;
@@ -76,5 +80,7 @@ public class BasisInfo implements Serializable{
 		this.serviceUrl = serviceUrl;
 		this.serviceImplUrl = serviceImplUrl;
 		this.controllerUrl = controllerUrl;
+		this.dtoUrl=dtoUrl;
+		this.queryUrl=queryUrl;
 	}
 }
