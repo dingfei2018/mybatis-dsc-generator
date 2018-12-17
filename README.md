@@ -123,7 +123,7 @@ import com.xin.dealcenter.entity.Order;
 /**   
  *  
  * @Description:  订单——DAO
- * @Author:       BianP   
+ * @Author:       dingfei   
  * @CreateDate:   2018年7月5日
  * @Version:      V1.0
  *    
@@ -370,7 +370,7 @@ import com.xin.dealcenter.entity.Order;
 /**   
  *  
  * @Description:  订单——SERVICE
- * @Author:       BianP   
+ * @Author:       dingfei   
  * @CreateDate:   2018年7月5日
  * @Version:      V1.0
  *    
@@ -451,7 +451,7 @@ import com.xin.dealcenter.service.OrderService;
 /**   
  *  
  * @Description:  订单——SERVICEIMPL
- * @Author:       BianP   
+ * @Author:       dingfei   
  * @CreateDate:   2018年7月5日
  * @Version:      V1.0
  *    
@@ -538,7 +538,7 @@ import io.swagger.annotations.ApiOperation;
 /**   
  * 
  * @Description:  订单接口层
- * @Author:       BianP   
+ * @Author:       dingfei   
  * @CreateDate:   2018年7月5日
  * @Version:      V1.0
  *    
@@ -557,8 +557,6 @@ public class OrderController {
 	 * @explain 查询订单对象  <swagger GET请求>
 	 * @param   对象参数：id
 	 * @return  order
-	 * @author  BianP
-	 * @time    2018年7月5日
 	 */
 	@GetMapping("/getOrderById/{id}")
 	@ApiOperation(value = "获取订单信息", notes = "获取订单信息[order]，作者：BianP")
@@ -588,8 +586,6 @@ public class OrderController {
 	 * @explain 添加订单对象
 	 * @param   对象参数：order
 	 * @return  int
-	 * @author  BianP
-	 * @time    2018年7月5日
 	 */
 	@PostMapping("/insertSelective")
 	@ApiOperation(value = "添加订单", notes = "添加订单[order],作者：BianP")
@@ -618,9 +614,6 @@ public class OrderController {
 	 * @explain 删除订单对象
 	 * @param   对象参数：id
 	 * @return  int
-	 * @author  BianP
-	 * @time    2018年7月5日
-	 */
 	@PostMapping("/deleteByPrimaryKey")
 	@ApiOperation(value = "删除订单", notes = "删除订单,作者：BianP")
 	@ApiImplicitParam(paramType="query", name = "id", value = "订单id", required = true, dataType = "Long")
@@ -649,8 +642,6 @@ public class OrderController {
 	 * @explain 修改订单对象
 	 * @param   对象参数：order
 	 * @return  order
-	 * @author  BianP
-	 * @time    2018年7月5日
 	 */
 	@ApiOperation(value = "修改订单", notes = "修改订单[order],作者：BianP")
 	@PostMapping("/updateByPrimaryKeySelective")
@@ -679,10 +670,8 @@ public class OrderController {
 	 * @explain 获取匹配订单
 	 * @param   对象参数：order
 	 * @return  List<Order>
-	 * @author  BianP
-	 * @time    2018年7月5日
 	 */
-	@ApiOperation(value = "条件查询订单", notes = "条件查询[order],作者：BianP")
+	@ApiOperation(value = "条件查询订单", notes = "条件查询[order]")
 	@PostMapping("/queryOrderList")
 	public JsonResult queryOrderList(Order order){
 		JsonResult result=new JsonResult();
@@ -703,11 +692,9 @@ public class OrderController {
 	 * @explain 分页条件查询订单   
 	 * @param   对象参数：AppPage<Order>
 	 * @return  PageInfo<Order>
-	 * @author  BianP
-	 * @time    2018年7月5日
 	 */
 	@GetMapping("/getPageOrder")
-	@ApiOperation(value = "分页查询", notes = "分页查询返回对象[PageInfo<Order>],作者：边鹏")
+	@ApiOperation(value = "分页查询", notes = "分页查询返回对象[PageInfo<Order>]")
 	@ApiImplicitParams({
         @ApiImplicitParam(paramType="query", name = "pageNum", value = "当前页", required = true, dataType = "int"),
         @ApiImplicitParam(paramType="query", name = "pageSize", value = "页行数", required = true, dataType = "int")
