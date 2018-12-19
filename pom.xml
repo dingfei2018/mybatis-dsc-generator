@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.github.flying-cattle</groupId>
+	<groupId>com.dingfei</groupId>
 	<artifactId>mybatis-dsc-generator</artifactId>
 	<version>2.0.0.RELEASE</version>
 	<packaging>jar</packaging>
@@ -21,14 +21,14 @@
 	<!-- 作者信息 -->
 	<developers>
 		<developer>
-			<name>flying-cattle</name>
-			<email>695429818@qq.com</email>
+			<name>dingfei</name>
+			<email>191154120@qq.com</email>
 		</developer>
 	</developers>
 	<scm>
-		<connection>scm:git:git@github.com:flying-cattle/mybatis-dsc-generator.git</connection>
-		<developerConnection>scm:git:git@github.com:flying-cattle/mybatis-dsc-generator.git</developerConnection>
-		<url>git@github.com:flying-cattle/mybatis-dsc-generator.git</url>
+		<connection>scm:git@github.com:dingfei2018/mybatis-dsc-generator.git</connection>
+		<developerConnection>scm:git@github.com:dingfei2018/mybatis-dsc-generator.git</developerConnection>
+		<url>git@github.com:dingfei2018/mybatis-dsc-generator.git</url>
 	</scm>
 
 	<properties>
