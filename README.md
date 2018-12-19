@@ -39,13 +39,6 @@ CREATE TABLE `order` (
 生成方法参考源码中的：https://github.com/flying-cattle/mybatis-dsc-generator/blob/master/src/main/java/com/github/mybatis/test/TestMain.java
 
 # 生成的实体类
-``` java
-/**
- * @filename:Order 2018年7月5日
- * @project deal-center  V1.0
- * Copyright(c) 2018 BianP Co. Ltd. 
- * All right reserved. 
- */
 package com.xin.dealcenter.entity;
 
 import java.io.Serializable;
@@ -62,7 +55,7 @@ import lombok.AllArgsConstructor;
 /**   
  *  
  * @Description:  订单
- * @Author:       BianP   
+ * @Author:       dingfei   
  * @CreateDate:   2018年7月5日
  * @Version:      V1.0
  *    
@@ -107,13 +100,6 @@ public class Order implements Serializable {
 
 ```
 # 生成的DAO
-``` java
-/**
- * @filename:OrderDao 2018年7月5日
- * @project deal-center  V1.0
- * Copyright(c) 2018 BianP Co. Ltd. 
- * All right reserved. 
- */
 package com.xin.dealcenter.dao;
 
 import java.util.List;
@@ -353,13 +339,6 @@ public interface OrderDao {
 </mapper>
 ```
 # 生成的SERVICE
-``` java
-/**
- * @filename:OrderService 2018年7月5日
- * @project deal-center  V1.0
- * Copyright(c) 2018 BianP Co. Ltd. 
- * All right reserved. 
- */
 package com.xin.dealcenter.service;
 
 import java.util.List;
@@ -381,7 +360,6 @@ public interface OrderService {
 	 * @explain 查询订单对象
 	 * @param   对象参数：id
 	 * @return  Order
-	 * @author  BianP
 	 */
 	public Order selectByPrimaryKey(Long id);
 	
@@ -389,7 +367,6 @@ public interface OrderService {
 	 * @explain 删除订单对象
 	 * @param   对象参数：id
 	 * @return  int
-	 * @author  BianP
 	 */
 	public int deleteByPrimaryKey(Long id);
 	
@@ -397,7 +374,6 @@ public interface OrderService {
 	 * @explain 添加订单对象
 	 * @param   对象参数：Order
 	 * @return  int
-	 * @author  BianP
 	 */
 	public int insertSelective(Order order);
 	
@@ -427,13 +403,6 @@ public interface OrderService {
 }
 ```
 # 生成的SERVICE_IMPL
-``` java
-/**
- * @filename:OrderServiceImpl 2018年7月5日
- * @project deal-center  V1.0
- * Copyright(c) 2018 BianP Co. Ltd. 
- * All right reserved. 
- */
 package com.xin.dealcenter.service.impl;
 
 import java.util.List;
@@ -504,13 +473,6 @@ public class OrderServiceImpl implements OrderService {
 }
 ```
 # 生成的CONTROLLER
-``` java
-/**
- * @filename:OrderController 2018年7月5日
- * @project deal-center  V1.0
- * Copyright(c) 2018 BianP Co. Ltd. 
- * All right reserved. 
- */
 package com.xin.dealcenter.webApi;
 
 import java.util.List;
